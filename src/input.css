@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---------- Font ---------- */
+  --font-sans: "Inter", sans-serif;   /* VERIFY: heading click karke font name dekho */
+
+  /* ---------- Brand ---------- */
+  --color-primary: #4CAF4F;           /* CONFIRMED (Figma: Brand/Primary) */
+  --color-secondary: #263238;         /* VERIFY */
+  --color-info: #2196F3;              /* VERIFY */
+
+  /* ---------- Neutral (text, background, borders) ---------- */
+  --color-neutral-black: #263238;       /* VERIFY */
+  --color-neutral-dark-grey: #4D4D4D;   /* VERIFY */
+  --color-neutral-grey: #717171;        /* VERIFY */
+  --color-neutral-light-grey: #89939E;  /* VERIFY */
+  --color-neutral-grey-blue: #ABBED1;   /* VERIFY */
+  --color-neutral-silver: #F5F7FA;      /* VERIFY */
+  /* White ke liye Tailwind ki default `white` class use hogi */
+
+  /* ---------- Primary Shades (dark green: hover, click) ---------- */
+  --color-primary-shade-1: #43A046;   /* VERIFY */
+  --color-primary-shade-2: #388E3B;   /* VERIFY */
+  --color-primary-shade-3: #237D31;   /* VERIFY */
+  --color-primary-shade-4: #1B5E1F;   /* VERIFY */
+  --color-primary-shade-5: #103E13;   /* VERIFY */
+
+  /* ---------- Primary Tints (light green: backgrounds, icon bg) ---------- */
+  --color-primary-tint-1: #66BB69;    /* VERIFY */
+  --color-primary-tint-2: #81C784;    /* VERIFY */
+  --color-primary-tint-3: #A5D6A7;    /* VERIFY */
+  --color-primary-tint-4: #C8E6C9;    /* VERIFY */
+  --color-primary-tint-5: #E8F5E9;    /* VERIFY */
+
+  /* ---------- Action (status colors) ---------- */
+  --color-warning: #FBC02D;           /* VERIFY */
+  --color-error: #E53835;             /* VERIFY */
+  --color-success: #2E7D31;           /* VERIFY */
+
+  /* ---------- Typography: Headlines (Semi Bold) ---------- */
+  --text-h1: 64px;  --text-h1--line-height: 76px;
+  --text-h2: 36px;  --text-h2--line-height: 44px;
+  --text-h3: 28px;  --text-h3--line-height: 36px;
+  --text-h4: 20px;  --text-h4--line-height: 28px;
+
+  /* ---------- Typography: Body (Regular / Medium) ---------- */
+  --text-body-1: 18px;  --text-body-1--line-height: 28px;
+  --text-body-2: 16px;  --text-body-2--line-height: 24px;
+  --text-body-3: 14px;  --text-body-3--line-height: 20px;
+  --text-body-4: 12px;  --text-body-4--line-height: 16px;
+
+    /* ---------- Shadow ---------- */
+  --shadow-card: 0 2px 4px 0 rgba(171, 190, 209, 0.2);   /* CONFIRMED (Figma: card) */
+  --shadow-image: 0 8px 16px 0 rgb(171 190 209 / 0.4);
+
+}
+
+@layer components {
+  .reveal {
+    @apply opacity-0 will-change-[opacity,transform] transition-[opacity,transform] duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)];
+  }
+
+  .reveal-up {
+    @apply transform-[translateY(48px)];
+  }
+
+  .reveal-down {
+    @apply transform-[translateY(-24px)];
+  }
+
+  .reveal-left {
+    @apply transform-[translateX(-64px)];
+  }
+
+  .reveal-right {
+    @apply transform-[translateX(64px)];
+  }
+
+  .reveal-zoom {
+    @apply transform-[translateY(24px)_scale(0.92)];
+  }
+
+  .reveal.is-visible {
+    @apply opacity-100 transform-none;
+  }
+}

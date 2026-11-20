@@ -115,8 +115,14 @@
     <!-- Main  -->
     <main>
 
-        <!-- heero section -->
-        <section class="bg-neutral-silver">
+<!-- heero section (slider) -->
+<section id="hero-slider" class="relative select-none overflow-hidden bg-neutral-silver">
+
+    <!-- slides track (JS pehli slide ka clone aakhir mein khud lagati hai) -->
+    <div id="hero-track" class="flex">
+
+        <!-- ===== Slide 1 ===== -->
+        <div class="slide w-full shrink-0">
             <div
                 class="mx-auto flex w-full max-w-360 flex-col items-center gap-10 px-4 py-12 md:px-8 md:py-16 lg:flex-row lg:gap-16 lg:px-12 xl:gap-26 xl:px-36 xl:py-24 2xl:max-w-400 2xl:gap-40">
 
@@ -141,10 +147,83 @@
                 <!-- right side -->
                 <div class="w-full max-w-97.75 lg:w-97.75 lg:shrink-0">
                     <img class="h-auto w-full transition-transform duration-500 ease-out hover:scale-[1.03]"
-                        src="./assets/Images/Illustration.png" alt="hero-illustrations">
+                        src="./assets/Images/Illustration.png" alt="hero-illustrations" draggable="false">
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- ===== Slide 2 ===== -->
+        <div class="slide w-full shrink-0" aria-hidden="true">
+            <div
+                class="mx-auto flex w-full max-w-360 flex-col items-center gap-10 px-4 py-12 md:px-8 md:py-16 lg:flex-row lg:gap-16 lg:px-12 xl:gap-26 xl:px-36 xl:py-24 2xl:max-w-400 2xl:gap-40">
+
+                <!-- left side -->
+                <div class="flex w-full flex-1 flex-col gap-8 text-center lg:max-w-164.25 lg:text-left">
+                    <div class="flex flex-col gap-4">
+                        <h1 class="font-sans text-3xl font-semibold text-neutral-dark-grey md:text-4xl xl:text-h1">
+                            Lessons and insights <span class="block text-primary">from 8 years</span>
+                        </h1>
+                        <p class="text-body-2 text-neutral-grey">
+                            Where to grow your business as a photographer: site or social media?
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" tabindex="-1"
+                            class="inline-flex h-13 w-32 items-center justify-center gap-2.5 rounded-sm bg-primary px-8 py-3.5 text-white active:bg-primary-shade-2 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-primary-shade-2 hover:shadow-lg hover:shadow-primary/30">Register</a>
+                    </div>
+                </div>
+
+                <!-- right side -->
+                <div class="w-full max-w-97.75 lg:w-97.75 lg:shrink-0">
+                    <img class="h-auto w-full transition-transform duration-500 ease-out hover:scale-[1.03]"
+                        src="./assets/Images/Illustration.png" alt="hero-illustrations" draggable="false">
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== Slide 3 ===== -->
+        <div class="slide w-full shrink-0" aria-hidden="true">
+            <div
+                class="mx-auto flex w-full max-w-360 flex-col items-center gap-10 px-4 py-12 md:px-8 md:py-16 lg:flex-row lg:gap-16 lg:px-12 xl:gap-26 xl:px-36 xl:py-24 2xl:max-w-400 2xl:gap-40">
+
+                <!-- left side -->
+                <div class="flex w-full flex-1 flex-col gap-8 text-center lg:max-w-164.25 lg:text-left">
+                    <div class="flex flex-col gap-4">
+                        <h1 class="font-sans text-3xl font-semibold text-neutral-dark-grey md:text-4xl xl:text-h1">
+                            Lessons and insights <span class="block text-primary">from 8 years</span>
+                        </h1>
+                        <p class="text-body-2 text-neutral-grey">
+                            Where to grow your business as a photographer: site or social media?
+                        </p>
+                    </div>
+                    <div>
+                        <a href="#" tabindex="-1"
+                            class="inline-flex h-13 w-32 items-center justify-center gap-2.5 rounded-sm bg-primary px-8 py-3.5 text-white active:bg-primary-shade-2 transition-all duration-300 ease-out hover:-translate-y-0.5 hover:bg-primary-shade-2 hover:shadow-lg hover:shadow-primary/30">Register</a>
+                    </div>
+                </div>
+
+                <!-- right side -->
+                <div class="w-full max-w-97.75 lg:w-97.75 lg:shrink-0">
+                    <img class="h-auto w-full transition-transform duration-500 ease-out hover:scale-[1.03]"
+                        src="./assets/Images/Illustration.png" alt="hero-illustrations" draggable="false">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- dots (teeno hamesha gol, 10px x 10px) -->
+    <div id="hero-dots" class="absolute bottom-4 left-1/2 z-20 flex -translate-x-1/2 items-center gap-2 xl:bottom-8">
+        <button type="button" aria-label="Slide 1"
+            style="width:10px;height:10px;min-width:10px;max-width:10px;flex:none;border-radius:9999px;padding:0;"
+            class="cursor-pointer bg-primary"></button>
+        <button type="button" aria-label="Slide 2"
+            style="width:10px;height:10px;min-width:10px;max-width:10px;flex:none;border-radius:9999px;padding:0;"
+            class="cursor-pointer bg-primary"></button>
+        <button type="button" aria-label="Slide 3"
+            style="width:10px;height:10px;min-width:10px;max-width:10px;flex:none;border-radius:9999px;padding:0;"
+            class="cursor-pointer bg-primary"></button>
+    </div>
+</section>
 
         <!-- clints section -->
         <section class="h-auto mt-10">
@@ -365,8 +444,7 @@
                             class="group flex w-63.75 shrink-0 flex-col items-center gap-2 text-center transition-transform duration-300 ease-out hover:-translate-y-1 sm:flex-row sm:items-start sm:gap-4 sm:text-left lg:w-56 xl:w-63.75">
                             <div
                                 class="h-12 w-12 shrink-0 transition-transform duration-300 ease-out group-hover:scale-110">
-                                <img class="h-full w-full" src="./assets/Icons/event bookings.png"
-                                    alt="Event bookings">
+                                <img class="h-full w-full" src="./assets/Icons/event bookings.png" alt="Event bookings">
                             </div>
                             <div>
                                 <h3
@@ -725,46 +803,251 @@
         </div>
     </footer>
 
-    <!-- Drawer menu script -->
     <script>
-        const drawer = document.getElementById('drawer');
-        const overlay = document.getElementById('overlay');
-
-        function openMenu() {
-            drawer.classList.remove('translate-x-full');
-            overlay.classList.remove('opacity-0', 'pointer-events-none');
-            document.body.classList.add('overflow-hidden');
-        }
-
-        function closeMenu() {
-            drawer.classList.add('translate-x-full');
-            overlay.classList.add('opacity-0', 'pointer-events-none');
-            document.body.classList.remove('overflow-hidden');
-        }
-
-        document.getElementById('menu-open').addEventListener('click', openMenu);
-        document.getElementById('menu-close').addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu);
-        drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
-        document.addEventListener('keydown', e => e.key === 'Escape' && closeMenu());
-        window.matchMedia('(min-width: 1280px)').addEventListener('change', e => e.matches && closeMenu());
-    </script>
-
-    <!-- Page load + scroll reveal animations + Hamburger setup -->
-    <script>
+        /* =====================================================
+           1) DRAWER MENU (hamburger)
+        ===================================================== */
         (function () {
-            // Jis user ne "reduce motion" on kiya ho, usay animation nahi dikhani
+            const drawer = document.getElementById('drawer');
+            const overlay = document.getElementById('overlay');
+            if (!drawer || !overlay) return;
+
+            function openMenu() {
+                drawer.classList.remove('translate-x-full');
+                overlay.classList.remove('opacity-0', 'pointer-events-none');
+                document.body.classList.add('overflow-hidden');
+            }
+
+            function closeMenu() {
+                drawer.classList.add('translate-x-full');
+                overlay.classList.add('opacity-0', 'pointer-events-none');
+                document.body.classList.remove('overflow-hidden');
+            }
+
+            document.getElementById('menu-open').addEventListener('click', openMenu);
+            document.getElementById('menu-close').addEventListener('click', closeMenu);
+            overlay.addEventListener('click', closeMenu);
+            drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+            document.addEventListener('keydown', e => e.key === 'Escape' && closeMenu());
+            window.matchMedia('(min-width: 1280px)').addEventListener('change', e => e.matches && closeMenu());
+        })();
+
+
+        /* =====================================================
+           2) HERO SLIDER (infinite loop, hamesha aage ki taraf)
+           - 3rd slide ke baad clone aata hai, phir chupke se 1st par jump
+           - khud chalta hai, dots click, mouse drag, mobile swipe
+        ===================================================== */
+        (function () {
+            // ====== SETTINGS ======
+            const SLIDE_DURATION = 5000;  // har slide kitni der rukegi (ms)
+            const SLIDE_SPEED = 800;      // slide sarakne ki speed (ms)
+            const DRAG_DISTANCE = 50;     // drag/swipe ki kam se kam doori (px)
+            // ======================
+
+            const section = document.getElementById('hero-slider');
+            const track = document.getElementById('hero-track');
+            const dotsWrap = document.getElementById('hero-dots');
+            if (!section || !track || !dotsWrap) return;
+
+            const slides = Array.from(track.querySelectorAll('.slide'));
+            const dots = dotsWrap.querySelectorAll('button');
+            const total = slides.length;
+
+            // Pehli slide ka clone aakhir mein lagao (sirf dikhane ke liye)
+            const clone = slides[0].cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            clone.querySelectorAll('a').forEach(function (a) { a.tabIndex = -1; });
+            track.appendChild(clone);
+
+            let pos = 0;          // track ki position (0 .. total)
+            let timer = null;
+            let busy = false;     // animation chal rahi ho to naya move nahi
+
+            function setTransition(on) {
+                track.style.transition = on ? 'transform ' + SLIDE_SPEED + 'ms ease-in-out' : 'none';
+            }
+
+            function move() {
+                track.style.transform = 'translateX(-' + (pos * 100) + '%)';
+            }
+
+            function updateA11y() {
+                const real = pos % total;
+                slides.forEach(function (s, n) {
+                    s.setAttribute('aria-hidden', n === real ? 'false' : 'true');
+                    s.querySelectorAll('a').forEach(function (a) {
+                        a.tabIndex = n === real ? 0 : -1;
+                    });
+                });
+                dots.forEach(function (d, n) {
+                    d.setAttribute('aria-current', n === real ? 'true' : 'false');
+                });
+            }
+
+            // Bina animation ke position set karo
+            function jump(p) {
+                setTransition(false);
+                pos = p;
+                move();
+                void track.offsetWidth; // reflow force
+                setTransition(true);
+            }
+
+            function next() {
+                if (busy) return;
+                busy = true;
+                pos++;
+                move();
+                updateA11y();
+            }
+
+            function prev() {
+                if (busy) return;
+                busy = true;
+                if (pos === 0) jump(total); // clone par chupke se jao, phir peeche ek slide
+                // thora ruk kar animate karo taake jump browser ko dikhe
+                requestAnimationFrame(function () {
+                    pos--;
+                    move();
+                    updateA11y();
+                });
+            }
+
+            function goTo(n) {
+                if (busy) return;
+                if (n === pos % total) return;
+                busy = true;
+                pos = n;
+                move();
+                updateA11y();
+            }
+
+            // Animation khatam: agar clone par aaye to chupke se asli 1st slide par jump
+            track.addEventListener('transitionend', function (e) {
+                if (e.target !== track || e.propertyName !== 'transform') return;
+                if (pos === total) jump(0);
+                busy = false;
+            });
+
+            // Safety: agar transitionend kisi wajah se na aaye
+            function unlockLater() {
+                setTimeout(function () {
+                    if (pos === total) jump(0);
+                    busy = false;
+                }, SLIDE_SPEED + 100);
+            }
+
+            function stop() {
+                if (timer) clearInterval(timer);
+                timer = null;
+            }
+
+            function start() {
+                stop();
+                timer = setInterval(function () { next(); unlockLater(); }, SLIDE_DURATION);
+            }
+
+            setTransition(true);
+
+            // Dot par click
+            dots.forEach(function (d, n) {
+                d.addEventListener('click', function () {
+                    goTo(n);
+                    unlockLater();
+                    start();
+                });
+            });
+
+            // Tab chhupa ho to ruke, wapas aane par chale
+            document.addEventListener('visibilitychange', function () {
+                if (document.hidden) stop(); else start();
+            });
+
+            // Mouse drag
+            let isDown = false;
+            let dragged = false;
+            let mouseStartX = 0;
+
+            section.addEventListener('mousedown', function (e) {
+                if (e.button !== 0) return;
+                if (dotsWrap.contains(e.target)) return;
+                isDown = true;
+                dragged = false;
+                mouseStartX = e.clientX;
+                section.style.cursor = 'grabbing';
+                stop();
+            });
+
+            window.addEventListener('mousemove', function (e) {
+                if (!isDown) return;
+                if (Math.abs(e.clientX - mouseStartX) > 5) dragged = true;
+            });
+
+            window.addEventListener('mouseup', function (e) {
+                if (!isDown) return;
+                isDown = false;
+                section.style.cursor = '';
+                const diff = e.clientX - mouseStartX;
+                if (Math.abs(diff) > DRAG_DISTANCE) {
+                    if (diff < 0) next(); else prev();
+                    unlockLater();
+                }
+                start();
+            });
+
+            // Drag ke baad galti se link click na ho
+            section.addEventListener('click', function (e) {
+                if (dragged) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dragged = false;
+                }
+            }, true);
+
+            section.addEventListener('dragstart', function (e) { e.preventDefault(); });
+
+            // Mobile swipe
+            let touchStartX = 0;
+            section.addEventListener('touchstart', function (e) {
+                touchStartX = e.touches[0].clientX;
+                stop();
+            }, { passive: true });
+
+            section.addEventListener('touchend', function (e) {
+                const diff = e.changedTouches[0].clientX - touchStartX;
+                if (Math.abs(diff) > DRAG_DISTANCE) {
+                    if (diff < 0) next(); else prev();
+                    unlockLater();
+                }
+                start();
+            }, { passive: true });
+
+            updateA11y();
+            move();
+            start();
+        })();
+
+
+        /* =====================================================
+           3) PAGE LOAD + SCROLL REVEAL ANIMATIONS
+        ===================================================== */
+        (function () {
+            // "Reduce motion" on ho to animation nahi (slider upar alag chalta hai)
             if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
             const TYPES = ['up', 'down', 'left', 'right', 'zoom'];
             const isDesktop = () => window.matchMedia('(min-width: 1024px)').matches;
             const q = (sel) => Array.from(document.querySelectorAll(sel));
+
+            // Section 2 se 8 tak
             const S = (n) => 'main > section:nth-of-type(' + n + ') > div';
 
-            // Element ko hide karke animation ke liye tayyar karo
+            // Hero slider ki pehli slide
+            const HERO = '#hero-track > .slide:first-child > div';
+
             function prep(els, type) {
                 els.forEach(function (el) {
-                    // Mobile/tablet par left/right ki jagah neeche se upar (horizontal overflow se bachne ke liye)
                     let t = type;
                     if (!isDesktop() && (t === 'left' || t === 'right')) t = 'up';
                     el.classList.add('reveal', 'reveal-' + t);
@@ -772,8 +1055,6 @@
                 return els;
             }
 
-            // Element ko dikhao, aur animation ke baad classes hata do
-            // (taake aapki hover animations bilkul pehle ki tarah kaam karen)
             function show(el, delay) {
                 el.style.transitionDelay = delay + 'ms';
                 el.classList.add('is-visible');
@@ -784,59 +1065,47 @@
                 }, delay + 1100);
             }
 
-            // ---------- 1) PAGE LOAD ANIMATION (header + hero) ----------
+            // ---------- PAGE LOAD (header + hero) ----------
             const loadItems = [];
 
-            // Header: logo, nav, buttons, hamburger (overlay aur drawer ko nahi chheda)
             prep(q('header > div > :not(#overlay):not(#drawer)'), 'down')
                 .forEach(function (el, i) { loadItems.push([el, i * 90]); });
 
-            // Hero: heading -> paragraph -> button -> image
-            const heroH1 = q(S(1) + ' > div:first-child > div:first-child > h1');
-            const heroP = q(S(1) + ' > div:first-child > div:first-child > p');
-            const heroBtn = q(S(1) + ' > div:first-child > div:last-child');
-            const heroImg = q(S(1) + ' > div:last-child');
+            const heroH1 = q(HERO + ' > div:first-child > div:first-child > h1');
+            const heroP = q(HERO + ' > div:first-child > div:first-child > p');
+            const heroBtn = q(HERO + ' > div:first-child > div:last-child');
+            const heroImg = q(HERO + ' > div:last-child');
 
             prep(heroH1, 'up').forEach(function (el) { loadItems.push([el, 250]); });
             prep(heroP, 'up').forEach(function (el) { loadItems.push([el, 400]); });
             prep(heroBtn, 'up').forEach(function (el) { loadItems.push([el, 550]); });
             prep(heroImg, 'zoom').forEach(function (el) { loadItems.push([el, 400]); });
 
-            // ---------- 2) SCROLL ANIMATIONS (baqi sections) ----------
+            // ---------- SCROLL (baqi sections) ----------
             const scrollItems = [].concat(
-                // Clients
                 prep(q(S(2) + ' > div:first-child'), 'up'),
                 prep(q(S(2) + ' > div:last-child > a'), 'zoom'),
-                // Community cards
                 prep(q(S(3) + ' > div:first-child'), 'up'),
                 prep(q(S(3) + ' > div:last-child > div'), 'up'),
-                // Unlock
                 prep(q(S(4) + ' > div:first-child'), 'left'),
                 prep(q(S(4) + ' > div:last-child'), 'right'),
-                // Achievements
                 prep(q(S(5) + ' > div:first-child'), 'left'),
                 prep(q(S(5) + ' > div:last-child .group'), 'up'),
-                // Calendar
                 prep(q(S(6) + ' > div:first-child'), 'left'),
                 prep(q(S(6) + ' > div:last-child'), 'right'),
-                // Customers
                 prep(q(S(7) + ' > div:first-child'), 'left'),
                 prep(q(S(7) + ' > div:last-child'), 'right'),
-                // Community Updates
                 prep(q(S(8) + ' > div:first-child'), 'up'),
                 prep(q(S(8) + ' > div:last-child > div'), 'up'),
-                // Footer
                 prep(q('footer > div:first-child > div > *'), 'up'),
                 prep(q('footer > div:last-child > div > div:first-child'), 'up'),
                 prep(q('footer > div:last-child > div > div:last-child > div'), 'up')
             );
 
-            // Load animation chalao
             setTimeout(function () {
                 loadItems.forEach(function (item) { show(item[0], item[1]); });
             }, 100);
 
-            // Scroll animation: jo elements ek saath screen mein aate hain wo ek ke baad ek (stagger) aate hain
             const observer = new IntersectionObserver(function (entries) {
                 let n = 0;
                 entries.forEach(function (entry) {
@@ -851,5 +1120,4 @@
         })();
     </script>
 </body>
-
 </html>
